@@ -31,7 +31,7 @@ with st.expander("Course Description"):
         st.write("This feature is still under construction")
         
 with st.expander("Learning Objectives"):
-    if st.button("Generate"):
+    if st.button("Query"):
         st.write("This feature is still under construction")
         
 with st.expander("Marketing Email"):
