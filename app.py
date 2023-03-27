@@ -126,6 +126,14 @@ try:
             string = "Course Description Large\n" + str(st.session_state['cdesqueryl']) + "\n\n\n" + "Course Description Medium\n" + str(st.session_state['cdesquerym']) + "\n\n\n" + "Course Description small\n" + str(st.session_state['cdesquery']) + "\n\n\n"+ "Learning Objectives\n"  + str(st.session_state['lo']) + "\n\n\n" + "Marketing email\n" + str(st.session_state['me']) + "\n\n\n" + "Enrollment Email\n" + str(st.session_state['ee']) +  "Completion email\n" + str(st.session_state['cc']) + "\n\n\n"+  "Evaluation Questions (Knowledge Change)\n" + str(st.session_state['eq']) + "\n\n\n"+  "Evaluation Questions (Performance Change)\n" + str(st.session_state['pc']) 
             st.code(string, language=None)
             st.session_state.clear()
+            files = os.listdir('scorm')
+
+            # Loop over each file and delete it
+            for file in files:
+                # Construct the full file path by joining the directory and file name
+                file_path = os.path.join(directory, file)
+                # Use the os.remove() function to delete the file
+                os.remove(file_path)
         except KeyError:
             st.warning("Some of the Contents are not generated competley, Click All Buttons before collapsing this")
 
