@@ -108,7 +108,7 @@ try:
     with col1.expander("Evaluation Questions (Knowledge Change)"):
         # st.selectbox("Size",("Medium","Short","Long"))
         # if st.button("Generate Evaluation Questions-kc"):
-        eq =  index.query("Generate a Evaluation Questions by writing 5-10 quiz questions to evaluate if a participant gained the knowledge and skills outlined in the course description and the Learning Objectives snippet.")
+        eq =  index.query("Generate 5-10 quiz questions to evaluate if a participant gained the knowledge and skills outlined in the " + str(st.session_state['lo']) )
         if 'eq' not in st.session_state:
             st.session_state['eq'] = eq
         st.code(st.session_state['eq'], language=None)
