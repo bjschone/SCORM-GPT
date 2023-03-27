@@ -35,7 +35,7 @@ if zip_file is not None:
     
     # Display a success message
     st.success('Zip file extracted and saved to directory: {}'.format(save_directory))
-    documents = SimpleDirectoryReader('scorm').load_data()
+    documents = SimpleDirectoryReader('scorm/scormcontent').load_data()
     index = GPTSimpleVectorIndex(documents)
     index.save_to_disk('indx.json')
     st.success('index created successfully')
