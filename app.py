@@ -92,24 +92,21 @@ with st.expander("Enrolment Email"):
         ee =  index.query("Generate a Enrollment email for this course, Write 5 subject lines (formatted with bullet points) and an email that would be sent to a participant who has signed up for this training course. It should confirm that they are now ready and able to access the course at the following link: http://www.insert_course_link_here.com. The tone of the email should be practical and slightly enthusiastic, and it should describe what the individual will learn in the training course. The email should use the Course Description (Medium) text snippet and include the Learning Objectives snippet")
         st.code(ee)
       
-
-
-# with st.expander("Learning Objectives"):
-#     if st.button("Generate Objectives"):
-#         st.write("This feature is still under construction")
-        
-# with st.expander("Marketing Email"):
-#     st.code("This feature is still under construction")
-
-        
-# with st.expander("Enrollment Email"):
-#     st.code("This feature is still under construction")
-    
-# with st.expander("Course Description"):
-#     st.selectbox("Evaluation questions",("Knowledge Change","Performance Change"))
-#     st.code("This feature is still under construction")
-        
-
-# # # Set up the Streamlit app
-# # st.title('Zip File Uploader')
-
+with st.expander("Completion Email"):
+    # st.selectbox("Size",("Medium","Short","Long"))
+    if st.button("Generate Completion-email"):
+        cc =  index.query("Generate a Completion email for this course,Write 5 subject lines (formatted with bullet points) and an email that would be sent to a participant who has completed this training course. It should confirm that they have finished the experience and it describe what they learned")
+        st.code(cc)
+      
+with st.expander("Evaluation Questions (Knowledge Change)"):
+    # st.selectbox("Size",("Medium","Short","Long"))
+    if st.button("Generate Evaluation Questions-kc"):
+        eq =  index.query("Generate a Evaluation Questions for this course, Write 5-10 quiz questions to evaluate if a participant gained the knowledge and skills outlined in the course material and the Learning Objectives snippet.")
+        st.code(eq)
+      
+with st.expander("Evaluation Questions (Performance Change)"):
+    # st.selectbox("Size",("Medium","Short","Long"))
+    if st.button("Generate Evaluation Questions-pc"):
+        pc =  index.query("Generate a Evaluation Questions for this course, Write 5-10 quiz questions to evaluate if a participant’s behavior or performance related to the course material may have changed  in their day to day activities (i.e., have they changed how they do their job, as it relates to the course material and the Learning Objectives).")
+        st.code(pc)
+     
