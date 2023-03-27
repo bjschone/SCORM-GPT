@@ -24,6 +24,28 @@ def extract_zipfile(zip_file, save_directory):
     with zipfile.ZipFile(zip_file, 'r') as zip_ref:
         zip_ref.extractall(save_directory)
 
+
+with st.expander("Course Description"):
+    st.selectbox("Size",("Medium","Short","Long"))
+    if st.button("Generate"):
+        st.write("This feature is still under construction")
+        
+with st.expander("Learning Objectives"):
+    if st.button("Generate"):
+        st.write("This feature is still under construction")
+        
+with st.expander("Marketing Email"):
+    st.code("This feature is still under construction")
+
+        
+with st.expander("Enrollment Email"):
+    st.code("This feature is still under construction")
+    
+with st.expander("Course Description"):
+    st.selectbox("Evaluation questions",("Knowledge Change","Performance Change"))
+    st.code("This feature is still under construction")
+                    
+        
 # Create a file uploader component for the zip file
 zip_file = st.file_uploader('Upload a zip file', type='zip')
 
