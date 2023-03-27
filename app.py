@@ -121,6 +121,6 @@ with st.expander("Evaluation Questions (Performance Change)"):
         st.code(st.session_state['pc'])
      
 with st.expander("Copy everything together"):
-    string = "Learning Objectives\n" + st.session_state['lo'] + "\n\n\n" + "Marketing email\n" + st.session_state['me'] + "\n\n\n" 
+    string = "Learning Objectives\n" + str(st.session_state['lo']) + "\n\n\n" + "Marketing email\n" + str(st.session_state['me']) + "\n\n\n" 
     st.code(string)
 
