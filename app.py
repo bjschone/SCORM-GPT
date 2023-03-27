@@ -59,19 +59,19 @@ if st.button("submit"):
 with st.expander("Course Description small"):
     # st.selectbox("Size",("Medium","Short","Long"))
     if st.button("Generate small"):
-        cdesquery =  index.query("Generate a one-sentence summary description of the course material.")
+        cdesquery =  index.query("Generate a one-sentence summary , of the course Description.")
         st.code(cdesquery)
 
 with st.expander("Course Description medium"):
     # st.selectbox("Size",("Medium","Short","Long"))
     if st.button("Generate Medium"):
-        cdesquerym =  index.query("Generate a three-sentence summary description of the course material.")
+        cdesquerym =  index.query("Generate a three-sentence summary , of the course Description.")
         st.code(cdesquerym)
         
 with st.expander("Course Description Large"):
     # st.selectbox("Size",("Medium","Short","Long"))
     if st.button("Generate Large"):
-        cdesqueryl =  index.query("Generate a five-sentence summary description of the course material.")
+        cdesqueryl =  index.query("Generate a five-sentence summary , of the course Description.")
         st.code(cdesqueryl)
         
 with st.expander("Learning Objectives"):
