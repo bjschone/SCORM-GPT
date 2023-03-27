@@ -57,7 +57,7 @@ if st.button("submit"):
 
 
 with st.expander("Course Description small"):
-    
+
     # st.selectbox("Size",("Medium","Short","Long"))
     # if st.button("Generate small"):
     cdesquery =  index.query("Generate a one-sentence summary description of the course material.")
@@ -84,9 +84,9 @@ with st.expander("Learning Objectives"):
 with st.expander("Marketing Email"):
 
     # st.selectbox("Size",("Medium","Short","Long"))
-    if st.button("Generate Marketing-email"):
+    # if st.button("Generate Marketing-email"):
     me =  index.query("Generate a Marketing email for this course, Write 5 clever subject lines (formatted with bullet points) and an email that could be used to generate excitement and interest in the training course. The email should contain the Course Description (Medium) snippet and the Learning Objectives snippet.")
-      st.code(me)
+    st.code(me)
 
 with st.expander("Enrolment Email"):
     # st.selectbox("Size",("Medium","Short","Long"))
