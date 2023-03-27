@@ -45,7 +45,7 @@ if zip_file is not None:
 # except FileNotFoundError:
 #     # Loading from a directory
     
-    sources = os.listdir(directory)
+    sources = os.listdir("scorm")
     st.write(sources)
 
    
