@@ -123,7 +123,7 @@ try:
         
     with col2.expander("Copy everything together"):
         try:
-            string = "Course Description Large\n" + str(st.session_state['cdesqueryl']) + "\n\n\n" + "Course Description Medium\n" + str(st.session_state['cdesquerym']) + "\n\n\n" + "Course Description small\n" + str(st.session_state['cdesquery']) + "\n\n\n"+ "Learning Objectives\n"  + str(st.session_state['lo']) + "\n\n\n" + "Marketing email\n" + str(st.session_state['me']) + "\n\n\n" + "Enrollment Email\n" + str(st.session_state['ee']) +  "Completion email\n" + str(st.session_state['cc']) +  "Evaluation Questions (Knowledge Change)\n" + str(st.session_state['eq']) +  "Evaluation Questions (Performance Change)\n" + str(st.session_state['kc']) 
+            string = "Course Description Large\n" + str(st.session_state['cdesqueryl']) + "\n\n\n" + "Course Description Medium\n" + str(st.session_state['cdesquerym']) + "\n\n\n" + "Course Description small\n" + str(st.session_state['cdesquery']) + "\n\n\n"+ "Learning Objectives\n"  + str(st.session_state['lo']) + "\n\n\n" + "Marketing email\n" + str(st.session_state['me']) + "\n\n\n" + "Enrollment Email\n" + str(st.session_state['ee']) +  "Completion email\n" + str(st.session_state['cc']) +  "Evaluation Questions (Knowledge Change)\n" + str(st.session_state['eq']) +  "Evaluation Questions (Performance Change)\n" + str(st.session_state['pc']) 
             st.code(string, language=None)
         except KeyError:
             st.warning("Some of the Contents are not generated competley, Click All Buttons before collapsing this")
