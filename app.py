@@ -53,12 +53,16 @@ try:
         # st.selectbox("Size",("Medium","Short","Long"))
         if st.button("Generate small"):
             cdesquery =  index.query("Generate a one-sentence summary , of the course Description.")
+            if 'cdesquery' not in st.session_state:
+                st.session_state['cdesquery'] = cdesquery
             st.code(st.session_state['cdesquery'], language=None)
 
     with col1.expander("Course Description medium"):
         # st.selectbox("Size",("Medium","Short","Long"))
         if st.button("Generate Medium"):
             cdesquerym =  index.query("Generate a three-sentence summary , of the course Description.")
+            if 'cdesquerym' not in st.session_state:
+                st.session_state['cdesquerym'] = cdesquerym
             st.code(st.session_state['cdesquerym'], language=None)
             
     with col1.expander("Course Description Large"):
