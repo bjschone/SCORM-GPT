@@ -34,15 +34,15 @@ if zip_file is not None:
     extract_zipfile(zip_file, save_directory)
     
     # Display a success message
-    st.success('Zip file extracted and saved to directory: {}'.format(save_directory))
+    st.success('Zip file extracted Successfuly',icon="✅")
     documents = SimpleDirectoryReader('scorm/scormcontent').load_data()
     index = GPTSimpleVectorIndex(documents)
     index.save_to_disk('indx.json')
-    st.success('index created successfully')
+    st.success('index created successfully',icon="✅")
 
     
-    sources = os.listdir("scorm/scormcontent")
-    st.write(sources)
+    # sources = os.listdir("scorm/scormcontent")
+    # st.write(sources)
 
    
 
@@ -125,4 +125,4 @@ try:
             st.warning("Some of the Contents are not generated competley, Click All Buttons before collapsing this")
 
 except NameError:
-    st.warning("Please Upload a Zip File Before Generating anything")
+    st.warning("Please Upload a Zip File Before Generating anything",icon="⚠️")
