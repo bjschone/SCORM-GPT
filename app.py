@@ -21,8 +21,8 @@ def extract_zipfile(zip_file, save_directory):
 email = "bjschone@gmail.com"
 password = "qwerty123"
 
-user_email = input("Enter your email: ")
-user_password = input("Enter your password: ")
+user_email = st.text_input("Enter your email: ")
+user_password = st.text_input("Enter your password: ")
 
 if user_email == email and user_password == password:
             
