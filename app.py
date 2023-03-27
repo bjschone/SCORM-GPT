@@ -76,7 +76,7 @@ try:
     with col1.expander("Learning Objectives"):
         # st.selectbox("Size",("Medium","Short","Long"))
         # if st.button("Generate Objectives"):
-        lo =  index.query("Generate Learning Objectives of the course material which Should be a list of 3-5 clear and measurable objectives that describe the information, skills, behaviors, or perspectives that the participants will acquire after reading and completing the course material. The learning objectives should clearly identify the outcomes or actions participants can expect to demonstrate as a result of the educational experience. Each objective should start with a verb, and depending on the complexity of the course material, use the language and levels found in Bloom’s taxonomy.")
+        lo =  index.query("Generate Learning Objectives which Should be a list of 3-5 clear and measurable objectives, The learning objectives should clearly identify the outcomes or actions participants can expect to demonstrate as a result of the educational experience. Each objective should start with a verb, and depending on the complexity of the course material, use the language and levels found in Bloom’s taxonomy.")
         if 'lo' not in st.session_state:
             st.session_state['lo'] = lo
         st.code(st.session_state['lo'], language=None)
