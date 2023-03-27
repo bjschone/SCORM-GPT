@@ -116,7 +116,7 @@ try:
     with col1.expander("Evaluation Questions (Performance Change)"):
         # st.selectbox("Size",("Medium","Short","Long"))
         # if st.button("Generate Evaluation Questions-pc"):
-        pc =  index.query("Generate a Evaluation Questions for this course, Write 5-10 quiz questions to evaluate if a participant’s behavior or performance related to the course descriptions may have changed  in their day to day activities (i.e., have they changed how they do their job, as it relates to the course description and the Learning Objectives.")
+        pc =  index.query("Generate a Evaluation Questions for this course, Write 5-10 quiz questions to evaluate if a participant’s behavior or performance may have changed  in their day to day activities (i.e., have they changed how they do their job, as it relates to the Learning Objectives.")
         if 'pc' not in st.session_state:
             st.session_state['pc'] = pc
         st.code(st.session_state['pc'], language=None)
