@@ -124,6 +124,6 @@ with st.expander("Copy everything together"):
     try:
         string = "Learning Objectives\n" + str(st.session_state['lo']) + "\n\n\n" + "Marketing email\n" + str(st.session_state['me']) + "\n\n\n" + "Enrollment Email\n" + str(st.session_state['ee']) +  "Completion email\n" + str(st.session_state['cc']) +  "Evaluation Questions (Knowledge Change)\n" + str(st.session_state['eq']) +  "Evaluation Questions (Performance Change)\n" + str(st.session_state['kc']) 
         st.code(string)
-    except NameError:
+    except KeyError:
         st.warning("Some of the Contents are not generated competley, Click All Buttons before collapsing this")
 
