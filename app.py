@@ -51,7 +51,7 @@ if zip_file is not None:
    
 
 query_str = st.text_input("Input query")
-if st.button(submit):
+if st.button("submit"):
     message_bot = index.query(query_str)
     st.write(message_bot)
     with st.expander("Course Description"):
