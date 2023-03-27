@@ -110,3 +110,7 @@ with st.expander("Evaluation Questions (Performance Change)"):
         pc =  index.query("Generate a Evaluation Questions for this course, Write 5-10 quiz questions to evaluate if a participant’s behavior or performance related to the course material may have changed  in their day to day activities (i.e., have they changed how they do their job, as it relates to the course material and the Learning Objectives).")
         st.code(pc)
      
+with st.expander("Copy everything together"):
+    string = "Learning Objectives\n" + lo + "\n\n\n" + "Marketing email\n" + me + "\n\n\n" 
+    st.code(string)
+
